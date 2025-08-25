@@ -1,7 +1,7 @@
 Grupo-5-Projeto:
 Projeto de administração de banco de dados
 
-Equipe do Projeto
+*Equipe do Projeto:*
 
 Product Owner
 Monyely Vitoria Gomes Brito – RA: 925200813
@@ -39,14 +39,14 @@ Especialista em Marketing
 Maria Eduarda Rosa – RA: 925109550
 github.com/Mduardar27
 
-Descrição do sistema:
+*Descrição do sistema:*
 Uma solução tecnológica para gestão financeira, com módulos de Cobrança (emissão, rastreamento de pagamentos e controle de inadimplência) e Relatórios (dashboards com insights sobre receita e desempenho). Simples, intuitivo e escalável, ideal para otimizar finanças e decisões estratégicas.
 
-Justificativa do sistema:
+*Justificativa do sistema:*
 O TechTrend CRM atende empresas que precisam de uma gestão financeira eficiente. O módulo de Cobrança automatiza faturamento e reduz inadimplência, enquanto o módulo de Relatórios oferece insights para decisões rápidas. Simples e moderno, otimiza operações e impulsiona o crescimento.
 
-Público alvo:
+*Público alvo:*
 Pequenas e médias empresas que buscam uma solução simples e tecnológica para gerenciar cobranças e analisar desempenho financeiro, especialmente aquelas com foco em otimizar fluxo de caixa e tomar decisões baseadas em dados.
 
-Módulos selecionados:
+*Módulos selecionados:*
 
