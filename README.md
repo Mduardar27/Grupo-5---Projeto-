@@ -1,7 +1,7 @@
 Grupo-5-Projeto:
 Projeto de administração de banco de dados
 
-*Equipe do Projeto:*
+**Equipe do Projeto:**
 
 Product Owner
 Monyely Vitoria Gomes Brito – RA: 925200813
