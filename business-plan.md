@@ -14,3 +14,5 @@ O problema da maioria das empresas, é não ter um CRM adequado para acompanhame
 O nosso CRM é de fácil implantação em relação aos CRMs do mercado. Pois surge como uma proposta para auxiliar com facilidade e clareza as empresas, com informações claras e objetivas dispensando informações indesejadas e burocracias.
 
 ## Análise de Mercado
+
+Nosso sistema possui integração com o PIX, através de parceria com a Omie, para acompanhar as evoluções do mercado e se destacar entre os principais concorrentes, como por exemplo: Salesforce, Assertiva Recupere, entre outros.
