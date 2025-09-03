@@ -21,7 +21,7 @@ Nosso foco são pequenas e médias empresas ou novas fintechs que estão buscand
 
 A oportunidade está no fato de que esse público cresce a cada ano e busca soluções mais práticas. A ameaça é a concorrência já estabelecida, mas acreditamos que o "jeito simples e acessível do Info Tech" pode atrair quem não se adapta bem a sistemas mais complexos.
 
-## 4. Plano de Marketing  
+## Plano de Marketing  
 
 O Info Tech vai se posicionar como **o sistema de gestão financeira descomplicado**.  
 
@@ -30,7 +30,7 @@ O Info Tech vai se posicionar como **o sistema de gestão financeira descomplica
 
 A comunicação vai ser direta e simples, para mostrar que entendemos o dia a dia dos stakeholders de Pequenas e Médias Empresas.  
 
-## 5. Plano Operacional
+## Plano Operacional
 
 **Metodologia:** Scrum, com entregas semanais (sprints).  
 
