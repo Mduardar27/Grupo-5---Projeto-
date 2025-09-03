@@ -11,4 +11,4 @@ Ele é um **CRM voltado para a parte financeira**.
 
 O problema da maioria das empresas, é não ter um CRM adequado para acompanhamento das obrigações financeiras.
 
-O nosso CRM é de fácil implantação em relação aos CRMs do mercado.
+O nosso CRM é de fácil implantação em relação aos CRMs do mercado. Pois surge como uma proposta para auxiliar com facilidade e clareza as empresas, com informações claras e objetivas dispensando informações indesejadas e burocracias.
