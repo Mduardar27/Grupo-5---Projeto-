@@ -26,7 +26,7 @@ A oportunidade está no fato de que esse público cresce a cada ano e busca solu
 O Info Tech vai se posicionar como **o sistema de gestão financeira descomplicado**.  
 
 - **Divulgação**: usar redes sociais (Instagram e LinkedIn), anúncios no Google e parcerias.  
-- **Proposta de valor**: *“Com o Info Tech, você reduz o não comprimento do contrato e entende de vez como estão as finanças da sua empresa.”*  
+- **Proposta de valor**: Com o Info Tech, você reduz o não comprimento do contrato e entende de vez como estão as finanças da sua empresa.  
 
 A comunicação vai ser direta e simples, para mostrar que entendemos o dia a dia dos stakeholders de Pequenas e Médias Empresas.  
 
