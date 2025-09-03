@@ -21,3 +21,31 @@ Nosso foco são pequenas e médias empresas ou novas fintechs que estão buscand
 
 A oportunidade está no fato de que esse público cresce a cada ano e busca soluções mais práticas. A ameaça é a concorrência já estabelecida, mas acreditamos que o "jeito simples e acessível do Info Tech" pode atrair quem não se adapta bem a sistemas mais complexos.
 
+## 5. Plano Operacional
+
+**Metodologia:** Scrum, com entregas semanais (sprints).  
+
+**Equipe:**  
+| Função | Nome | RA | GitHub |
+|--------|------|----|--------|
+| Product Owner | Monyely Vitoria Gomes Brito | 925200813 | github.com/whomony |
+| Gerente de Projetos | Matheus Lucchesi | 925109970 | github.com/matheuslucchesigit |
+| Desenvolvedor Full Stack | Lucas Oliveira Silva | 924100751 | github.com/LucasOliveira0608 |
+| Engenheira de Banco de Dados | Luana Monteiro | 923200773 | github.com/monteiro948 |
+| UX/UI Designer | Guilherme | 925107109 | github.com/Gerald1nnn |
+| Analista de QA/Testes | Lucilia M° LS Gimenes | 925204303 | github.com/luciliagimenes |
+| Especialista em Segurança | Higor Santos Guedes | 925109161 | github.com/H-guedes |
+| Suporte Técnico | Everton Canazzo | 925200395 | github.com/Evertoncanazzo-77 |
+| Especialista em Marketing | Maria Eduarda Rosa | 925109550 | github.com/Mduardar27 |
+
+**Tecnologias utilizadas:** hospedagem em nuvem.  
+
+**Cronograma (exemplo):**  
+| Etapa | Prazo |
+|-------|-------|
+| Planejamento | 1ª semana |
+| Desenvolvimento Backend | 2ª a 4ª semana |
+| Desenvolvimento Frontend | 3ª a 5ª semana |
+| Testes e QA | 6ª semana |
+| Entrega final | 7ª semana |
+
