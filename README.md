@@ -43,7 +43,7 @@ github.com/Mduardar27
 Uma solução tecnológica para gestão financeira, com módulos de Cobrança (emissão, rastreamento de pagamentos e controle de inadimplência) e Relatórios (dashboards com insights sobre receita e desempenho). Simples, intuitivo e escalável, ideal para otimizar finanças e decisões estratégicas.
 
 <h3>Justificativa do sistema:</h3>
-O TechTrend CRM atende empresas que precisam de uma gestão financeira eficiente. O módulo de Cobrança automatiza faturamento e reduz inadimplência, enquanto o módulo de Relatórios oferece insights para decisões rápidas. Simples e moderno, otimiza operações e impulsiona o crescimento.
+O Info Tech CRM atende empresas que precisam de uma gestão financeira eficiente. O módulo de Cobrança automatiza faturamento e reduz inadimplência, enquanto o módulo de Relatórios oferece insights para decisões rápidas. Simples e moderno, otimiza operações e impulsiona o crescimento.
 
 <h3>Público alvo:</h3>
 Pequenas e médias empresas que buscam uma solução simples e tecnológica para gerenciar cobranças e analisar desempenho financeiro, especialmente aquelas com foco em otimizar fluxo de caixa e tomar decisões baseadas em dados.
