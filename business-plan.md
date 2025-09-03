@@ -28,7 +28,7 @@ O Info Tech vai se posicionar como **o sistema de gestão financeira descomplica
 - **Divulgação**: usar redes sociais (Instagram e LinkedIn), anúncios no Google e parcerias com contadores.  
 - **Proposta de valor**: *“Com o Info Tech, você reduz o não comprimento do contrato e entende de vez como estão as finanças da sua empresa.”*  
 
-A comunicação vai ser direta e simples, para mostrar que entendemos o dia a dia do dono de uma Pequenas e Médias Empresas .  
+A comunicação vai ser direta e simples, para mostrar que entendemos o dia a dia do dono de Pequenas e Médias Empresas .  
 
 ## 5. Plano Operacional
 
