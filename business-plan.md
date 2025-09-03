@@ -63,7 +63,7 @@ A comunicação vai ser direta e simples, para mostrar que entendemos o dia a di
 O investimento inicial necessário é estimado em R$ 20.000,00, destinado a servidores, marketing e horas de desenvolvimento.  
 O custo mensal recorrente será de aproximadamente R$ 3.000,00, contemplando infraestrutura e suporte.  
 
-O modelo de monetização adotado será baseado em assinaturas:  
+O modelo de monetização adotado será baseado em assinaturas: 
 - **Básico** – R$ 99,90/mês  
 - **Pro** – R$ 249,90/mês  
 - **Premium** – R$ 499,90/mês  
