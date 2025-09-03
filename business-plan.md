@@ -20,3 +20,4 @@ Nosso sistema possui integração com o PIX, através de parceria com a Omie, pa
 Nosso foco são pequenas e médias empresas ou novas fintechs que estão buscando um CRM inovador.
 
 A oportunidade está no fato de que esse público cresce a cada ano e busca soluções mais práticas. A ameaça é a concorrência já estabelecida, mas acreditamos que o "jeito simples e acessível do Info Tech" pode atrair quem não se adapta bem a sistemas mais complexos.
+
