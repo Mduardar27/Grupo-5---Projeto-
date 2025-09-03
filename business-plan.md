@@ -1,6 +1,6 @@
 # Business Plan – Info Tech  
 
-##  Sumário Executivo  
+##  Sumário Executivo
 
 O **Info Tech** é um sistema que criamos para ajudar pequenas e médias empresas a cuidar melhor das finanças. A ideia é ter um jeito simples e prático de controlar cobranças e acompanhar resultados, sem precisar ficar perdido em planilhas complicadas.  
 
@@ -12,3 +12,5 @@ Ele é um **CRM voltado para a parte financeira**.
 O problema da maioria das empresas, é não ter um CRM adequado para acompanhamento das obrigações financeiras.
 
 O nosso CRM é de fácil implantação em relação aos CRMs do mercado. Pois surge como uma proposta para auxiliar com facilidade e clareza as empresas, com informações claras e objetivas dispensando informações indesejadas e burocracias.
+
+## Análise de Mercado
