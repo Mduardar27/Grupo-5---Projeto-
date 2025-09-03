@@ -81,7 +81,7 @@ Custos mensais: R$ 3.000,00
 | **Realista**  | 30 clientes    | 15.000               | 6.000                | **9.000**          |
 | **Pessimista**| 15 clientes    | 7.500                | 5.000                | **2.500**          |
 
-### 📊 Interpretação
+### Interpretação
 - **Otimista:** Crescimento rápido, muitos clientes e lucro alto.  
 - **Realista:** Crescimento moderado, mas ainda muito rentável.  
 - **Pessimista:** Poucos clientes, mas o negócio se mantém sem prejuízo.  
