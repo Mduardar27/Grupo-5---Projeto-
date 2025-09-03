@@ -30,18 +30,6 @@ O Info Tech vai se posicionar como **o sistema de gestão financeira descomplica
 
 A comunicação vai ser direta e simples, para mostrar que entendemos o dia a dia dos stakeholders de Pequenas e Médias Empresas.  
 
-## Plano Financeiro
-
-O investimento inicial necessário é estimado em R$ 20.000,00, destinado a servidores, marketing e horas de desenvolvimento.  
-O custo mensal recorrente será de aproximadamente R$ 3.000,00, contemplando infraestrutura e suporte.  
-
-O modelo de monetização adotado será baseado em assinaturas:  
-- **Básico** – R$ 99,90/mês  
-- **Pro** – R$ 249,90/mês  
-- **Premium** – R$ 499,90/mês  
-
-Com esta estrutura, estimamos atingir o ponto de equilíbrio em um período reduzido, impulsionado principalmente pela adesão inicial aos planos Básico e Pro.
-
 ## 5. Plano Operacional
 
 **Metodologia:** Scrum, com entregas semanais (sprints).  
@@ -70,3 +58,14 @@ Com esta estrutura, estimamos atingir o ponto de equilíbrio em um período redu
 | Testes e QA | 6ª semana |
 | Entrega final | 7ª semana |
 
+## Plano Financeiro
+
+O investimento inicial necessário é estimado em R$ 20.000,00, destinado a servidores, marketing e horas de desenvolvimento.  
+O custo mensal recorrente será de aproximadamente R$ 3.000,00, contemplando infraestrutura e suporte.  
+
+O modelo de monetização adotado será baseado em assinaturas:  
+- **Básico** – R$ 99,90/mês  
+- **Pro** – R$ 249,90/mês  
+- **Premium** – R$ 499,90/mês  
+
+Com esta estrutura, estimamos atingir o ponto de equilíbrio em um período reduzido, impulsionado principalmente pela adesão inicial aos planos Básico e Pro.
