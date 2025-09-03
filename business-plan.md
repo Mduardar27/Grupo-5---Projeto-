@@ -69,3 +69,19 @@ O modelo de monetização adotado será baseado em assinaturas:
 - **Premium** – R$ 499,90/mês  
 
 Com esta estrutura, estimamos atingir o ponto de equilíbrio em um período reduzido, impulsionado principalmente pela adesão inicial aos planos Básico e Pro.
+
+Investimento inicial: R$ 20.000,00
+Custos mensais: R$ 3.000,00
+
+## Simulações de Cenários Financeiros
+
+| Cenário       | Nº de Clientes | Receita Mensal (R$) | Custos Mensais (R$) | Lucro Mensal (R$) |
+|---------------|----------------|----------------------|----------------------|--------------------|
+| **Otimista**  | 50 clientes    | 25.000               | 8.000                | **17.000**         |
+| **Realista**  | 30 clientes    | 15.000               | 6.000                | **9.000**          |
+| **Pessimista**| 15 clientes    | 7.500                | 5.000                | **2.500**          |
+
+### 📊 Interpretação
+- **Otimista:** Crescimento rápido, muitos clientes e lucro alto.  
+- **Realista:** Crescimento moderado, mas ainda muito rentável.  
+- **Pessimista:** Poucos clientes, mas o negócio se mantém sem prejuízo.  
