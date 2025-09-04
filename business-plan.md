@@ -85,3 +85,11 @@ Custos mensais: R$ 3.000,00
 - **Otimista:** Crescimento rápido, muitos clientes e lucro alto.  
 - **Realista:** Crescimento moderado, mas ainda muito rentável.  
 - **Pessimista:** Poucos clientes, mas o negócio se mantém sem prejuízo.  
+
+## Plano de Crescimento e Escalabilidade
+
+O plano de crescimento,possui 2 fases. Sendo estas: 
+- ##Consolidação nacional a qual deve ser feita em uma estimativa de 12 meses, com foco em PMEs brasileiras com foco em campanhas digitais e parcerias, trazendo assim a meta de 300 clientes ativos chegando assim ao ponto de equilibrio.
+  
+-## Escalabilidade tecnologica a qual será a etapa de integrações com WhatsApp, ERPs e e-commerce, atingindo assim a meta de crescimento mensal de clientes de 10%.
+
