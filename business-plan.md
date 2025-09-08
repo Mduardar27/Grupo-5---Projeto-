@@ -23,6 +23,8 @@ A oportunidade está no fato de que esse público cresce a cada ano e busca solu
 
 Os beneficíos que nosso o CRM pode trazer são, aumento na produtividade, melhora recuperação e redução nos custo, acompanhando as tendencias do mercado atual, como a ultilização de IA e automação, integrações locais. 
 
+Segundo o Grand View Research, empresa america de pesquisa, o mercado de software de gestão de cobrança foi avaliado em U$ 400 milhões no ano de 2023
+
 ## Plano de Marketing  
 
 O Info Tech vai se posicionar como **o sistema de gestão financeira descomplicado**.  
