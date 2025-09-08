@@ -21,6 +21,8 @@ Nosso foco são pequenas e médias empresas ou novas fintechs que estão buscand
 
 A oportunidade está no fato de que esse público cresce a cada ano e busca soluções mais práticas. A ameaça é a concorrência já estabelecida, mas acreditamos que o "jeito simples e acessível do Info Tech" pode atrair quem não se adapta bem a sistemas mais complexos.
 
+Os beneficíos que nosso o CRM pode trazer são, aumento na produtividade, melhora recuperação e redução nos custo, acompanhando as tendencias do mercado atual, como a ultilização de IA e automação, integrações locais. 
+
 ## Plano de Marketing  
 
 O Info Tech vai se posicionar como **o sistema de gestão financeira descomplicado**.  
