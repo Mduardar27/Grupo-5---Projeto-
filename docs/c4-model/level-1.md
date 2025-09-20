@@ -1,3 +1,6 @@
+# Diagrama de Contexto - CRM de Cobrança
+
+```mermaid
 C4Context
     title CRM de Cobrança - Diagrama de Contexto
     Person(usr_fin, "Equipe Financeira", "Gerencia cobranças e pagamentos")
