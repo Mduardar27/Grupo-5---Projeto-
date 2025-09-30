@@ -26,3 +26,46 @@ O **Diagrama Entidade-Relacionamento (DER)** do sistema **Info Tech** foi constr
 
 
 ---
+# Modelo Entidade-Relacionamento (MER) – Info Tech
+
+O **Modelo Entidade-Relacionamento (MER)** detalha as entidades, atributos e relacionamentos com foco no banco de dados relacional que sustentará o sistema Info Tech.
+
+---
+## Entidades e Atributos
+
+| Entidade | Atributos |
+|----------|-----------|
+| **Clientes** | id_cliente (PK, int), nome_razao_social (varchar, NOT NULL), cpf_cnpj (varchar UNIQUE), email (varchar), telefone (varchar), data_cadastro (date DEFAULT CURRENT_DATE), segmento (varchar) |
+| **Contratos** | id_contrato (PK, int), id_cliente (FK), descricao_servico (varchar), data_inicio (date), data_fim (date), valor_total (decimal(10,2)) |
+| **Cobranças** | id_cobranca (PK, int), id_contrato (FK), valor (decimal(10,2)), data_emissao (date), data_vencimento (date), status (enum: pendente, pago, atrasado) |
+| **Pagamentos** | id_pagamento (PK, int), id_cobranca (FK), valor_pago (decimal(10,2)), data_pagamento (date), forma_pagamento (enum: boleto, pix, cartão), status (varchar) |
+| **Contas_Receber** | id_conta (PK, int), id_cliente (FK), valor (decimal(10,2)), vencimento (date), status (varchar) |
+| **Contas_Pagar** | id_conta (PK, int), fornecedor (varchar), valor (decimal(10,2)), vencimento (date), status (varchar) |
+| **Usuários** | id_usuario (PK, int), nome (varchar), email (varchar UNIQUE), senha_hash (varchar), cargo (varchar), id_perfil (FK) |
+| **Perfis_Acesso** | id_perfil (PK, int), descricao (enum: admin, financeiro, suporte, marketing) |
+| **Relatórios** | id_relatorio (PK, int), id_usuario (FK), tipo (varchar), periodo (varchar), data_geracao (timestamp) |
+| **Logs** | id_log (PK, int), id_usuario (FK), acao (varchar), data_hora (timestamp DEFAULT CURRENT_TIMESTAMP), ip (varchar) |
+| **Integrações** | id_integracao (PK, int), tipo (varchar), descricao (varchar), chave_api (varchar), ativo (boolean) |
+
+---
+## Justificativa dos Relacionamentos
+- **Clientes → Contratos (1:N)**: um cliente pode firmar vários contratos ao longo do tempo.  
+- **Contratos → Cobranças (1:N)**: cada contrato gera diversas cobranças recorrentes.  
+- **Cobranças → Pagamentos (1:N)**: uma cobrança pode ser quitada em várias parcelas/pagamentos.  
+- **Contas a Pagar/Receber (N:N)**: transações podem estar ligadas a diferentes clientes e fornecedores.  
+- **Usuários → Perfis de Acesso (N:1)**: cada usuário possui apenas um perfil ativo.  
+- **Relatórios (N:N com Usuários e Clientes)**: relatórios podem ser filtrados por cliente e gerados por múltiplos usuários.  
+- **Logs → Usuários (N:1)**: cada log está atrelado a um usuário responsável pela ação.  
+
+---
+## Exemplos de Tabelas por Módulo
+
+| Módulo | Exemplos de Tabelas |
+|--------|---------------------|
+| **Clientes** | Clientes, Segmentos |
+| **Financeiro** | Contratos, Cobranças, Pagamentos, Contas_Pagar, Contas_Receber |
+| **Usuários e Segurança** | Usuários, Perfis_Acesso, Logs |
+| **Relatórios** | Relatórios, Visualizacoes |
+| **Integrações** | Integrações (PIX, ERP, e-mail) |
+
+---
