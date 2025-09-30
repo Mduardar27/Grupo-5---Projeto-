@@ -72,3 +72,36 @@ O **Modelo Entidade-Relacionamento (MER)** detalha as entidades, atributos e rel
 ---
 # Diagrama/Modelo visual das entidades e relacionamentos:
 <img width="1176" height="860" alt="DER-MER" src="https://github.com/user-attachments/assets/f4af8ef5-e44e-4bbb-a0ba-1f212cf4cdf0" />
+
+
+---
+# Justificativa de Normalização – Info Tech
+
+A modelagem do banco de dados do sistema Info Tech segue as **três primeiras formas normais (1FN, 2FN e 3FN)**, garantindo consistência e evitando redundâncias.
+
+---
+## Primeira Forma Normal (1FN)
+- Todos os campos são **atômicos**, sem listas ou valores múltiplos no mesmo campo.  
+- Exemplo: telefones de clientes foram normalizados em um campo único ou em tabela auxiliar.  
+
+---
+## Segunda Forma Normal (2FN)
+- Todas as colunas **não-chave** dependem totalmente da chave primária.  
+- Exemplo: em **Contratos**, o atributo `valor_total` depende apenas de `id_contrato`.  
+
+---
+## Terceira Forma Normal (3FN)
+- Nenhum atributo não-chave depende de outro atributo não-chave.  
+- Exemplo: em **Pagamentos**, o atributo `status` depende do pagamento em si, não da forma de pagamento.  
+
+---
+## Casos Especiais
+- **Logs** → Mantidos como entidade independente para rastreabilidade e auditoria.  
+- **Integrações** → Podem armazenar pequenas redundâncias (ex: chave de API e status) para simplificar performance.  
+
+---
+## Benefícios da Normalização
+- Redução de redundância de dados.  
+- Garantia de integridade referencial.  
+- Facilidade de manutenção e escalabilidade.  
+- Base sólida para relatórios confiáveis.
