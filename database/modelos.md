@@ -68,4 +68,7 @@ O **Modelo Entidade-Relacionamento (MER)** detalha as entidades, atributos e rel
 | **Relatórios** | Relatórios, Visualizacoes |
 | **Integrações** | Integrações (PIX, ERP, e-mail) |
 
+
 ---
+# Diagrama/Modelo visual das entidades e relacionamentos:
+<img width="1176" height="860" alt="DER-MER" src="https://github.com/user-attachments/assets/f4af8ef5-e44e-4bbb-a0ba-1f212cf4cdf0" />
