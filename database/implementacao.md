@@ -288,8 +288,9 @@ ALTER TABLE `USUARIOS`
 COMMIT;
 
 
-RESUMO DOS RELACIONAMENTOS 
-
+  RESUMO DOS RELACIONAMENTOS 
+ --
+ 
 Tipo	Tabelas Envolvidas	Descrição:
 
 1:1	cobrancas ↔ pagamentos	Cada cobrança tem um único pagamento.
