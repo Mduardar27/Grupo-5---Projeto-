@@ -34,8 +34,8 @@ CREATE TABLE `Cobrancas` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `CONTAS_PAGAR`
+
+ Estrutura da tabela `CONTAS_PAGAR`
 --
 
 CREATE TABLE `CONTAS_PAGAR` (
@@ -48,8 +48,8 @@ CREATE TABLE `CONTAS_PAGAR` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `contas_receber`
+
+ Estrutura da tabela `contas_receber`
 --
 
 CREATE TABLE `contas_receber` (
@@ -62,8 +62,8 @@ CREATE TABLE `contas_receber` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `CONTRATOS`
+
+ Estrutura da tabela `CONTRATOS`
 --
 
 CREATE TABLE `CONTRATOS` (
