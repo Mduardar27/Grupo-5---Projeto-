@@ -4,7 +4,7 @@
 -- --------------------------------------------------------
 
 --
- Estrutura da tabela `CLIENTES`
+Estrutura da tabela `CLIENTES`
 --
 
 CREATE TABLE `CLIENTES` (
