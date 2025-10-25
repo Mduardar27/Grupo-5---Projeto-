@@ -151,139 +151,137 @@ Alteração da tabelas
 ALTER TABLE `CLIENTES`
   ADD PRIMARY KEY (`ID_CLIENTE`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `Cobrancas`
   ADD PRIMARY KEY (`ID_COBRANCAS`),
   ADD KEY `FK_CONTRATO_CLIENTE` (`ID_CONTRATO`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `CONTAS_PAGAR`
   ADD PRIMARY KEY (`ID_CONTA`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `contas_receber`
   ADD PRIMARY KEY (`id_conta`),
   ADD KEY `FK_CLIENTE_C_RECEBER` (`id_cliente`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `CONTRATOS`
   ADD PRIMARY KEY (`ID_CONTRATO`),
   ADD KEY `FK_CLIENTE_CONTRATOS` (`ID_CLIENTE`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `LOGS`
   ADD PRIMARY KEY (`ID_LOG`),
   ADD KEY `FK_USUARIO_LOGS` (`ID_USUARIO`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `PAGAMENTO`
   ADD PRIMARY KEY (`ID_PAGAMENTO`),
   ADD KEY `FK_COBRANCA_PAGAMENTO` (`ID_COBRANCA`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `PERFIS_ACESSO`
   ADD PRIMARY KEY (`ID_PERFIL`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `RELATORIOS`
   ADD PRIMARY KEY (`ID_RELATORIO`),
   ADD KEY `FK_RELATORIOS_USUARIOS` (`ID_USUARIO`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `USUARIOS`
   ADD PRIMARY KEY (`ID_USUARIO`),
   ADD KEY `FK_PERFIL_USUARIOS` (`ID_PERFIL`);
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `CLIENTES`
   MODIFY `ID_CLIENTE` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `Cobrancas`
   MODIFY `ID_COBRANCAS` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `CONTAS_PAGAR`
   MODIFY `ID_CONTA` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `contas_receber`
   MODIFY `id_conta` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
 
 ALTER TABLE `CONTRATOS`
   MODIFY `ID_CONTRATO` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `LOGS`
   MODIFY `ID_LOG` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `PAGAMENTO`
   MODIFY `ID_PAGAMENTO` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `PERFIS_ACESSO`
   MODIFY `ID_PERFIL` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `RELATORIOS`
   MODIFY `ID_RELATORIO` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `USUARIOS`
   MODIFY `ID_USUARIO` int NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `Cobrancas`
   ADD CONSTRAINT `FK_CONTRATO` FOREIGN KEY (`ID_CONTRATO`) REFERENCES `CONTRATOS` (`ID_CONTRATO`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `contas_receber`
   ADD CONSTRAINT `FK_CLIENTE_C_RECEBER` FOREIGN KEY (`id_cliente`) REFERENCES `CLIENTES` (`ID_CLIENTE`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `CONTRATOS`
   ADD CONSTRAINT `FK_CLIENTE` FOREIGN KEY (`ID_CLIENTE`) REFERENCES `CLIENTES` (`ID_CLIENTE`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `LOGS`
   ADD CONSTRAINT `FK_USUARIO` FOREIGN KEY (`ID_USUARIO`) REFERENCES `USUARIOS` (`ID_USUARIO`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- --------------------------------------------------------
 
 ALTER TABLE `PAGAMENTO`
   ADD CONSTRAINT `FK_COBRANCA` FOREIGN KEY (`ID_COBRANCA`) REFERENCES `Cobrancas` (`ID_COBRANCAS`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `RELATORIOS`
   ADD CONSTRAINT `FK_RELATORIOS_USUARIOS` FOREIGN KEY (`ID_USUARIO`) REFERENCES `USUARIOS` (`ID_USUARIO`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- --------------------------------------------------------
+
 
 ALTER TABLE `USUARIOS`
   ADD CONSTRAINT `FK_PERFIL` FOREIGN KEY (`ID_PERFIL`) REFERENCES `PERFIS_ACESSO` (`ID_PERFIL`) ON DELETE RESTRICT ON UPDATE RESTRICT;
