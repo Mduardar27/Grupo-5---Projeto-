@@ -286,3 +286,22 @@ ALTER TABLE `RELATORIOS`
 ALTER TABLE `USUARIOS`
   ADD CONSTRAINT `FK_PERFIL` FOREIGN KEY (`ID_PERFIL`) REFERENCES `PERFIS_ACESSO` (`ID_PERFIL`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
+
+
+RESUMO DOS RELACIONAMENTOS 
+
+Tipo	Tabelas Envolvidas	Descrição:
+
+1:1	cobrancas ↔ pagamentos	Cada cobrança tem um único pagamento.
+
+1:N	clientes → contratos	Um cliente pode ter vários contratos.
+
+1:N	contratos → cobrancas	Um contrato pode gerar várias cobranças.
+
+1:N	clientes → contas_receber	Um cliente pode ter várias contas a receber.
+
+1:N	usuarios → relatorios	Um usuário pode gerar vários relatórios.
+
+1:N	usuarios → logs	Um usuário pode gerar vários logs.
+
+N:N	usuarios ↔ relatorios (via usuario_relatorio)	Vários usuários podem acessar vários relatórios.
