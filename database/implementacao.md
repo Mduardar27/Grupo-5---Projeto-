@@ -3,9 +3,9 @@
 
 -- --------------------------------------------------------
 
---
+
  Estrutura da tabela `CLIENTES`
---
+
 
 CREATE TABLE `CLIENTES` (
   `ID_CLIENTE` int NOT NULL,
