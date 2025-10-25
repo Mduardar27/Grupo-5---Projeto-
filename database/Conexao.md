@@ -1,7 +1,7 @@
 
-# 🗄️ Instruções de Conexão ao Banco de Dados MySQL
+#  Instruções de Conexão ao Banco de Dados MySQL
 
-## 🔧 1. Como conectar
+##  1. Como conectar
 
 O grupo acessa o banco de dados por meio do *phpMyAdmin*.
 
