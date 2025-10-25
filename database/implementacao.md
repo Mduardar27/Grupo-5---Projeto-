@@ -251,49 +251,38 @@ ALTER TABLE `RELATORIOS`
 ALTER TABLE `USUARIOS`
   MODIFY `ID_USUARIO` int NOT NULL AUTO_INCREMENT;
 
---
--- Restrições para despejos de tabelas
---
+-- --------------------------------------------------------
 
---
--- Limitadores para a tabela `Cobrancas`
---
 ALTER TABLE `Cobrancas`
   ADD CONSTRAINT `FK_CONTRATO` FOREIGN KEY (`ID_CONTRATO`) REFERENCES `CONTRATOS` (`ID_CONTRATO`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
---
--- Limitadores para a tabela `contas_receber`
---
+-- --------------------------------------------------------
+
 ALTER TABLE `contas_receber`
   ADD CONSTRAINT `FK_CLIENTE_C_RECEBER` FOREIGN KEY (`id_cliente`) REFERENCES `CLIENTES` (`ID_CLIENTE`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
---
--- Limitadores para a tabela `CONTRATOS`
---
+-- --------------------------------------------------------
+
 ALTER TABLE `CONTRATOS`
   ADD CONSTRAINT `FK_CLIENTE` FOREIGN KEY (`ID_CLIENTE`) REFERENCES `CLIENTES` (`ID_CLIENTE`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
---
--- Limitadores para a tabela `LOGS`
---
+-- --------------------------------------------------------
+
 ALTER TABLE `LOGS`
   ADD CONSTRAINT `FK_USUARIO` FOREIGN KEY (`ID_USUARIO`) REFERENCES `USUARIOS` (`ID_USUARIO`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
---
--- Limitadores para a tabela `PAGAMENTO`
---
+-- --------------------------------------------------------
+
 ALTER TABLE `PAGAMENTO`
   ADD CONSTRAINT `FK_COBRANCA` FOREIGN KEY (`ID_COBRANCA`) REFERENCES `Cobrancas` (`ID_COBRANCAS`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
---
--- Limitadores para a tabela `RELATORIOS`
---
+-- --------------------------------------------------------
+
 ALTER TABLE `RELATORIOS`
   ADD CONSTRAINT `FK_RELATORIOS_USUARIOS` FOREIGN KEY (`ID_USUARIO`) REFERENCES `USUARIOS` (`ID_USUARIO`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
---
--- Limitadores para a tabela `USUARIOS`
---
+-- --------------------------------------------------------
+
 ALTER TABLE `USUARIOS`
   ADD CONSTRAINT `FK_PERFIL` FOREIGN KEY (`ID_PERFIL`) REFERENCES `PERFIS_ACESSO` (`ID_PERFIL`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
