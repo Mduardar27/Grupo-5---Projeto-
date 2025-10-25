@@ -146,6 +146,8 @@ CREATE TABLE `USUARIOS` (
 
 -- --------------------------------------------------------
 
+Alteração da tabelas
+--
 ALTER TABLE `CLIENTES`
   ADD PRIMARY KEY (`ID_CLIENTE`);
 
