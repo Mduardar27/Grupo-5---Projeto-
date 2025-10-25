@@ -19,7 +19,7 @@ CREATE TABLE `CLIENTES` (
 
 -- --------------------------------------------------------
 
---
+
 -- Estrutura da tabela `Cobrancas`
 --
 
