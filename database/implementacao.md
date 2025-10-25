@@ -77,8 +77,8 @@ CREATE TABLE `CONTRATOS` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `LOGS`
+
+ Estrutura da tabela `LOGS`
 --
 
 CREATE TABLE `LOGS` (
@@ -91,8 +91,8 @@ CREATE TABLE `LOGS` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `PAGAMENTO`
+
+Estrutura da tabela `PAGAMENTO`
 --
 
 CREATE TABLE `PAGAMENTO` (
@@ -106,8 +106,8 @@ CREATE TABLE `PAGAMENTO` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `PERFIS_ACESSO`
+
+ Estrutura da tabela `PERFIS_ACESSO`
 --
 
 CREATE TABLE `PERFIS_ACESSO` (
@@ -117,8 +117,8 @@ CREATE TABLE `PERFIS_ACESSO` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `RELATORIOS`
+
+Estrutura da tabela `RELATORIOS`
 --
 
 CREATE TABLE `RELATORIOS` (
@@ -131,8 +131,8 @@ CREATE TABLE `RELATORIOS` (
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `USUARIOS`
+
+Estrutura da tabela `USUARIOS`
 --
 
 CREATE TABLE `USUARIOS` (
@@ -144,72 +144,72 @@ CREATE TABLE `USUARIOS` (
   `ID_PERFIL` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Índices para tabelas despejadas
+
+ Índices para tabelas despejadas
 --
 
---
--- Índices para tabela `CLIENTES`
+
+ Índices para tabela `CLIENTES`
 --
 ALTER TABLE `CLIENTES`
   ADD PRIMARY KEY (`ID_CLIENTE`);
 
---
--- Índices para tabela `Cobrancas`
+
+ Índices para tabela `Cobrancas`
 --
 ALTER TABLE `Cobrancas`
   ADD PRIMARY KEY (`ID_COBRANCAS`),
   ADD KEY `FK_CONTRATO_CLIENTE` (`ID_CONTRATO`);
 
---
--- Índices para tabela `CONTAS_PAGAR`
+
+ Índices para tabela `CONTAS_PAGAR`
 --
 ALTER TABLE `CONTAS_PAGAR`
   ADD PRIMARY KEY (`ID_CONTA`);
 
---
--- Índices para tabela `contas_receber`
+
+ Índices para tabela `contas_receber`
 --
 ALTER TABLE `contas_receber`
   ADD PRIMARY KEY (`id_conta`),
   ADD KEY `FK_CLIENTE_C_RECEBER` (`id_cliente`);
 
---
--- Índices para tabela `CONTRATOS`
+
+ Índices para tabela `CONTRATOS`
 --
 ALTER TABLE `CONTRATOS`
   ADD PRIMARY KEY (`ID_CONTRATO`),
   ADD KEY `FK_CLIENTE_CONTRATOS` (`ID_CLIENTE`);
 
---
--- Índices para tabela `LOGS`
+
+ Índices para tabela `LOGS`
 --
 ALTER TABLE `LOGS`
   ADD PRIMARY KEY (`ID_LOG`),
   ADD KEY `FK_USUARIO_LOGS` (`ID_USUARIO`);
 
---
--- Índices para tabela `PAGAMENTO`
+
+ Índices para tabela `PAGAMENTO`
 --
 ALTER TABLE `PAGAMENTO`
   ADD PRIMARY KEY (`ID_PAGAMENTO`),
   ADD KEY `FK_COBRANCA_PAGAMENTO` (`ID_COBRANCA`);
 
---
--- Índices para tabela `PERFIS_ACESSO`
+
+ Índices para tabela `PERFIS_ACESSO`
 --
 ALTER TABLE `PERFIS_ACESSO`
   ADD PRIMARY KEY (`ID_PERFIL`);
 
---
--- Índices para tabela `RELATORIOS`
+
+Índices para tabela `RELATORIOS`
 --
 ALTER TABLE `RELATORIOS`
   ADD PRIMARY KEY (`ID_RELATORIO`),
   ADD KEY `FK_RELATORIOS_USUARIOS` (`ID_USUARIO`);
 
---
--- Índices para tabela `USUARIOS`
+
+ Índices para tabela `USUARIOS`
 --
 ALTER TABLE `USUARIOS`
   ADD PRIMARY KEY (`ID_USUARIO`),
