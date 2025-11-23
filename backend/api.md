@@ -157,3 +157,21 @@ Atualiza os dados de uma cobrança.
 
 ## ➤ **DELETE /cobrancas/:id**
 Exclui uma cobrança.
+
+# ------------------------------------
+# 📌 EXEMPLOS PARA TESTES (POSTMAN/INSOMNIA)
+# ------------------------------------
+
+### ✔ Criar cliente (POST)
+```http
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Maria Oliveira",
+  "cpf": "22233344455",
+  "telefone": "11999992222",
+  "email": "maria@example.com"
+}
+
+```
