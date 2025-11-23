@@ -173,5 +173,30 @@ Content-Type: application/json
   "telefone": "11999992222",
   "email": "maria@example.com"
 }
+```
 
+### ✔ Atualizar contrato (PUT)
+```http
+PUT http://localhost:3000/contratos/1
+Content-Type: application/json
+
+{
+  "cliente_id": 1,
+  "descricao": "Contrato atualizado",
+  "valor": 5000,
+  "data_inicio": "2025-01-01",
+  "data_fim": "2025-12-31"
+}
+```
+
+### ✔ Deletar cobrança (DELETE)
+```http
+DELETE http://localhost:3000/cobrancas/3
+```
+
+### 📌 FORMATO DE ERROS
+```json
+{
+  "error": "Erro ao consultar o banco"
+}
 ```
