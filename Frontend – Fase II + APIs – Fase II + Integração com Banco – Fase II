@@ -1,0 +1,286 @@
+1. Dependências principais (no package.json)
+{
+  "name": "info-tech-crm-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.32.1",
+    "mysql2": "^3.3.0",
+    "dotenv": "^16.1.4",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "cors": "^2.8.5"
+  }
+}
+
+2. Configuração do banco e inicialização (ex: config/database.js)
+// config/database.js
+require('dotenv').config();
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT || 3306,
+    dialect: 'mysql',
+    logging: false,
+    define: {
+      underscored: true,
+      timestamps: true
+    }
+  }
+);
+
+async function connectDB() {
+  try {
+    await sequelize.authenticate();
+    console.log('Conexão com o MySQL bem-sucedida.');
+  } catch (err) {
+    console.error('Não foi possível conectar ao banco:', err);
+  }
+}
+
+module.exports = { sequelize, connectDB };
+Crie um arquivo .env (não comite credenciais) com algo como:
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASSWORD=sua_senha
+DB_NAME=seu_banco
+DB_PORT=3306
+JWT_SECRET=uma_chave_secreta
+3. Modelo de entidade — exemplo de “Cliente” (em models/Cliente.js)
+// models/Cliente.js
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../config/database');
+
+const Cliente = sequelize.define('Cliente', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
+  nome: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+    validate: {
+      isEmail: true
+    }
+  },
+  cnpj_cpf: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true
+  },
+  telefone: {
+    type: DataTypes.STRING,
+    allowNull: true
+  }
+  // adicione outros campos conforme seu DER/MER
+});
+
+module.exports = Cliente;
+4. Usuário e autenticação básica (modelo User, rotas Auth)
+models/User.js
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../config/database');
+
+const User = sequelize.define('User', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
+  username: {
+    type: DataTypes.STRING,
+    unique: true,
+    allowNull: false
+  },
+  password_hash: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
+  // Adicione role/permissões se necessário
+});
+
+module.exports = User;
+routes/auth.js
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
+
+router.post('/signup', async (req, res, next) => {
+  try {
+    const { username, password } = req.body;
+    if (!username || !password) return res.status(400).json({ message: 'Dados incompletos' });
+
+    const existing = await User.findOne({ where: { username } });
+    if (existing) return res.status(409).json({ message: 'Usuário já existe' });
+
+    const hash = await bcrypt.hash(password, 10);
+    const user = await User.create({ username, password_hash: hash });
+    res.status(201).json({ message: 'Usuário criado', user: { id: user.id, username: user.username } });
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post('/signin', async (req, res, next) => {
+  try {
+    const { username, password } = req.body;
+    const user = await User.findOne({ where: { username } });
+    if (!user) return res.status(401).json({ message: 'Usuário ou senha inválidos' });
+
+    const valid = await bcrypt.compare(password, user.password_hash);
+    if (!valid) return res.status(401).json({ message: 'Usuário ou senha inválidos' });
+
+    const token = jwt.sign({ userId: user.id, username: user.username }, process.env.JWT_SECRET, { expiresIn: '8h' });
+    res.json({ token, user: { id: user.id, username: user.username } });
+  } catch (err) {
+    next(err);
+  }
+});
+
+module.exports = router;
+Middleware de autenticação (middleware/auth.js)
+const jwt = require('jsonwebtoken');
+
+function authenticateToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+  if (!token) return res.status(401).json({ message: 'Token não fornecido' });
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    if (err) return res.status(403).json({ message: 'Token inválido' });
+    req.user = user; // { userId, username, iat, exp }
+    next();
+  });
+}
+
+module.exports = { authenticateToken };
+5. Rotas CRUD para “Cliente” (ex: routes/cliente.js)
+const express = require('express');
+const router = express.Router();
+const Cliente = require('../models/Cliente');
+const { authenticateToken } = require('../middleware/auth');
+
+// CREATE
+router.post('/', authenticateToken, async (req, res, next) => {
+  try {
+    const cliente = await Cliente.create(req.body);
+    res.status(201).json(cliente);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// READ (listagem com paginação e filtros simples)
+router.get('/', authenticateToken, async (req, res, next) => {
+  try {
+    const { page = 1, limit = 10, nome } = req.query;
+    const where = {};
+    if (nome) where.nome = nome;
+
+    const offset = (page - 1) * limit;
+    const result = await Cliente.findAndCountAll({
+      where,
+      limit: parseInt(limit),
+      offset: parseInt(offset),
+      order: [['id', 'ASC']]
+    });
+    res.json({
+      total: result.count,
+      page: parseInt(page),
+      pageSize: parseInt(limit),
+      clientes: result.rows
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// READ por id
+router.get('/:id', authenticateToken, async (req, res, next) => {
+  try {
+    const cliente = await Cliente.findByPk(req.params.id);
+    if (!cliente) return res.status(404).json({ message: 'Cliente não encontrado' });
+    res.json(cliente);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// UPDATE
+router.put('/:id', authenticateToken, async (req, res, next) => {
+  try {
+    const [updated] = await Cliente.update(req.body, { where: { id: req.params.id } });
+    if (!updated) return res.status(404).json({ message: 'Cliente não encontrado' });
+    const cliente = await Cliente.findByPk(req.params.id);
+    res.json(cliente);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// DELETE
+router.delete('/:id', authenticateToken, async (req, res, next) => {
+  try {
+    const deleted = await Cliente.destroy({ where: { id: req.params.id } });
+    if (!deleted) return res.status(404).json({ message: 'Cliente não encontrado' });
+    res.status(204).send();
+  } catch (err) {
+    next(err);
+  }
+});
+
+module.exports = router;
+6. Servidor principal e configuração de middlewares (arquivo server.js)
+// server.js
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const { connectDB, sequelize } = require('./config/database');
+
+const authRoutes = require('./routes/auth');
+const clienteRoutes = require('./routes/cliente');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Rotas públicas
+app.use('/api/auth', authRoutes);
+
+// Rotas protegidas
+app.use('/api/clientes', clienteRoutes);
+
+// Middleware global de tratamento de erros
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({ message: 'Erro interno no servidor', error: err.message });
+});
+
+const PORT = process.env.PORT || 3001;
+
+async function start() {
+  await connectDB();
+  await sequelize.sync(); // cria tabelas se não existirem
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
+}
+start();
