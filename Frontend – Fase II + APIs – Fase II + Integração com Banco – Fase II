@@ -56,6 +56,7 @@ DB_PASSWORD=sua_senha
 DB_NAME=seu_banco
 DB_PORT=3306
 JWT_SECRET=uma_chave_secreta
+
 3. Modelo de entidade — exemplo de “Cliente” (em models/Cliente.js)
 // models/Cliente.js
 const { DataTypes } = require('sequelize');
@@ -92,6 +93,8 @@ const Cliente = sequelize.define('Cliente', {
 });
 
 module.exports = Cliente;
+
+
 4. Usuário e autenticação básica (modelo User, rotas Auth)
 models/User.js
 const { DataTypes } = require('sequelize');
@@ -172,6 +175,8 @@ function authenticateToken(req, res, next) {
 }
 
 module.exports = { authenticateToken };
+
+
 5. Rotas CRUD para “Cliente” (ex: routes/cliente.js)
 const express = require('express');
 const router = express.Router();
@@ -248,6 +253,8 @@ router.delete('/:id', authenticateToken, async (req, res, next) => {
 });
 
 module.exports = router;
+
+
 6. Servidor principal e configuração de middlewares (arquivo server.js)
 // server.js
 require('dotenv').config();
