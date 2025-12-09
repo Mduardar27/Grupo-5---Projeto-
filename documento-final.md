@@ -136,7 +136,7 @@ CREATE TABLE pagamentos (
         FOREIGN KEY (cobranca_id) REFERENCES cobrancas(id)
 );
 
-'''
+```
 
 6. INTEGRAÇÃO COM O FRONTEND
 A comunicação entre Frontend e o MySQL é intermediada pela camada de Backend (APIs RESTful em PHP).
